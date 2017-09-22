@@ -11,7 +11,7 @@ class SearchBar extends Component {
             address: '',
         };
 
-        this.apiUrl = 'https://api.ledgerwallet.com/blockchain/v2/btc/addresses';
+        this.apiUrl = 'blockchain/v2/btc/addresses';
     }
 
     fetchInfos = () => {
@@ -75,10 +75,6 @@ class List extends Component {
 }
 
 class Item extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const {tr} = this.props;
 
