@@ -11,7 +11,7 @@ class SearchBar extends Component {
             address: '',
         };
 
-        this.apiUrl = 'https://localhost:3000/blockchain/v2/btc/addresses';
+        this.apiUrl = 'https://api.ledgerwallet.com/blockchain/v2/btc/addresses';
     }
 
     fetchInfos = () => {

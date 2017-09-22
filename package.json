@@ -15,7 +15,7 @@
     "react-moment": "^0.6.5",
     "react-scripts": "1.0.13"
   },
-  "proxy": "https://api.ledgerwallet.com/",
+  "proxy": "http://localhost:3002/",
   "main": "src/electron-starter.js",
   "scripts": {
     "start": "react-scripts start",
