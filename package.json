@@ -1,0 +1,31 @@
+{
+  "name": "electron_test",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": {
+    "/blockchain": {
+      "target": "https://api.ledgerwallet.com"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "moment": "^2.18.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-moment": "^0.6.5",
+    "react-scripts": "1.0.13"
+  },
+  "proxy": "https://api.ledgerwallet.com/",
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron ."
+  },
+  "devDependencies": {
+    "autobind-decorator": "^2.1.0",
+    "electron": "^1.7.6"
+  }
+}
