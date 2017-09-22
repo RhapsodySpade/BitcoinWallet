@@ -104,20 +104,16 @@ class App extends Component {
     }
 
     _getMovement(item){
-        let valInput = 0;
-        let valOutput = 0;
 
-        item.inputs.map((input) => {
-            if (input.address === this.state.currentAddress ) {
-                valInput += input.value
-            }
-        });
-        item.outputs.map((output) => {
-            if (output.address === this.state.currentAddress ) {
-                valOutput += output.value
-            }
-        });
-        return (valOutput - valInput);
+        const totalInput = item.inputs
+            .filter(input => input.address === this.state.currentAddress)
+            .reduce((acc, input)=> acc + input.value, 0);
+
+        const totalOutput = item.outputs
+            .filter(output => output.address === this.state.currentAddress)
+            .reduce((acc, output)=> acc + output.value, 0);
+
+        return (totalOutput - totalInput);
     }
 
     _getItemList(list){
